@@ -1,0 +1,35 @@
+NOTENRECHNER – Merkdatei
+Stand: 31.10.2026
+
+WAS DIE APP KANN
+- Gesamtpunkte einmal eingeben, dann nur noch die erreichten Punkte jeder Arbeit.
+- HR- und Gym-Note stehen nebeneinander, als Kommanote wie in der Notenliste.
+- Halbe/Viertelpunkte: erreichte und Gesamtpunkte werden mit 2 bzw. 4 malgenommen (wie in der Notenliste beschrieben).
+- Unten: beste Note und Durchschnitt der Klasse, getrennt für HR und Gym. Einzelne Arbeiten löschen (mit Rückgängig), „Neue Klasse beginnen“.
+- Gespeichert werden nur Zahlen, keine Namen, nur auf dem Handy (localStorage). Funktioniert offline.
+
+GRUNDLAGE
+- Notentabellen aus ~/Downloads/Notenliste_HR.xlsx und Notenliste_Gym.xlsx (Blatt „Notenausgabe“, 6–150 Gesamtpunkte) wurden 1:1 in index.html übernommen (TAB_HR, TAB_GYM).
+- Am 31.10.2026 automatisch geprüft: alle 22.910 Werte stimmen mit den Excel-Listen überein.
+- Ändern sich die Excel-Listen, müssen die Tabellen in index.html neu erzeugt werden (Claude fragen).
+
+DATEIEN (alle hochladen)
+index.html, manifest.webmanifest, sw.js, icon-180.png, icon-512.png
+(icon.svg ist nur die Vorlage für das Symbol, logo-herz.png das Schullogo dafür – beide NICHT hochladen)
+
+SYMBOL
+- Seit 31.10.2026: Schullogo-Herz auf Dunkelblau #0A3254 (wie Startpfad), darunter „1,0–6,0“ in Weiß.
+- Neu erzeugen: icon.svg mit qlmanage zu PNG umwandeln (Claude fragen).
+
+VERÖFFENTLICHEN (GitHub Pages)
+1. Auf github.com ein neues öffentliches Repository „notenrechner“ anlegen.
+2. „Add file“ → „Upload files“ → die fünf Dateien hineinziehen → „Commit changes“.
+3. Settings → Pages → Branch „main“, Ordner „/ (root)“ → Save.
+4. Nach 1–2 Minuten: https://<github-name>.github.io/notenrechner/ in Safari öffnen.
+5. Teilen-Symbol → „Zum Home-Bildschirm“.
+
+UPDATE SPÄTER
+- In sw.js die Zeile VERSION hochzählen (notenrechner-2 …), dann geänderte Dateien wieder hochladen.
+
+OFFEN
+- Noch nicht hochgeladen, noch nicht auf dem iPhone getestet.
